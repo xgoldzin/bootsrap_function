@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetição</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <h1>Cadastro de Alunos</h1>
+    <!-- Nome do aluno-->
+    <input type="text" name="nome" id="nome" placeholder="Nome completo">
+    <!-- Data de nascimento do aluno-->
+    <input type="date" name="dataNasc" id="dataNasc" placeholder="Data de nascimento">
+    <!-- Curso do aluno-->
+    <select name="curso" id="curso">
+        <option value="Programador Web">Programador Web</option>
+        <option value="Programador de Sistemas">Programador de Sistemas</option>
+        <option value="Administrador de Banco de Dados">Administrador de Banco de Dados</option>
+        <option value="Administrador de Redes">Administrador de Redes</option>
+    </select>
+    <!-- Botão de enviar -->
+    <button onclick="cadastrarAluno()">Cadastrar</button>
+    <div id="msg"></div>
+    <button onclick="mostrarAlunos()">Visualizar</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Data de nascimento</th>
+                <th>Curso</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaAlunos">
+        </tbody>
+    </table>
+</body>
+</html>
