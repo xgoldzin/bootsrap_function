@@ -5,35 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Repetição</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <h1>Cadastro de Alunos</h1>
-    <!-- Nome do aluno-->
-    <input type="text" name="nome" id="nome" placeholder="Nome completo">
-    <!-- Data de nascimento do aluno-->
-    <input type="date" name="dataNasc" id="dataNasc" placeholder="Data de nascimento">
-    <!-- Curso do aluno-->
-    <select name="curso" id="curso">
-        <option value="Programador Web">Programador Web</option>
-        <option value="Programador de Sistemas">Programador de Sistemas</option>
-        <option value="Administrador de Banco de Dados">Administrador de Banco de Dados</option>
-        <option value="Administrador de Redes">Administrador de Redes</option>
-    </select>
-    <!-- Botão de enviar -->
-    <button onclick="cadastrarAluno()">Cadastrar</button>
-    <div id="msg"></div>
-    <button onclick="mostrarAlunos()">Visualizar</button>
-    <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Data de nascimento</th>
-                <th>Curso</th>
-            </tr>
-        </thead>
-        <tbody id="tabelaAlunos">
-        </tbody>
-    </table>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"><h1> <i class="fa-regular fa-folder-open"></i> Cadastro de Alunos</h1></div>
+            <div class="col"></div>
+        </div>
+
+        <div class="form-label">
+            <input type="text" name="nome" id="nome" placeholder="Nome completo" class="form-control mb-3">
+        </div>
+        <div class="form-label">
+            <input type="date" name="dataNasc" id="dataNasc" class="form-control mb-3">
+        </div>
+        <div class="form-label">
+            <select name="curso" id="curso" class="form-select form-control mb-3">
+                <option value="Programador Web">Programador Web</option>
+                <option value="Programador de Sistemas">Programador de Sistemas</option>
+                <option value="Administrador de Banco de Dados">Administrador de Banco de Dados</option>
+                <option value="Administrador de Redes">Administrador de Redes</option>
+            </select>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <button onclick="cadastrarAluno()" class="btn btn-primary"><i class="fa-regular fa-paper-plane"></i> Cadastrar</button>
+                <button onclick="mostrarAlunos()" class="btn btn-secondary"><i class="fa-regular fa-eye"></i> Visualizar</button>
+            </div>
+        </div>
+
+        <div class="row" id="tabelaAlunos">
+            <!-- Os cards serão inseridos aqui -->
+        </div>
+    </div>
 </body>
 </html>

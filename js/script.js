@@ -19,11 +19,13 @@ function mostrarAlunos() {
     listaAlunos.forEach(aluno => {
         // Cria uma linha na tabela pra cada aluno
         document.getElementById("tabelaAlunos").innerHTML += `
-            <tr>
-                <td>${aluno.nome}</td>
-                <td>${aluno.dataNasc}</td>
-                <td>${aluno.curso}</td>
-            <tr>
+        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">${aluno.nome}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">${aluno.dataNasc}</h6>
+            <p class="card-text">${aluno.curso}</p>
+            </div>
+</div>
         `
     })
 }
